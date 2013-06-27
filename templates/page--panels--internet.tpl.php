@@ -142,7 +142,6 @@
                 <?php endif; ?>
               </div>
             <?php endif; ?>
-            <?php if (!drupal_is_front_page()): ?>
             <section role ="search">
               <div id="gcwu-srchbx">
                 <h2><?php print t('Search'); ?></h2>
@@ -151,7 +150,6 @@
                 <?php endif; ?>
               </div>
             </section>
-            <?php endif; ?>
           </div>
         </div>
         <nav role="navigation">
