@@ -332,7 +332,12 @@ function wetkit_adaptivetheme_preprocess_region(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 function wetkit_adaptivetheme_preprocess_block(&$variables, $hook) {
-
+  // Add support for css classes and ids from panels
+  // Add classes
+  if (!empty($variables['elements']['#block']->css_class)) {
+    $classes = explode(' ', $variables['elements']['#block']->css_class);
+    $variables['classes_array'] = array_merge($variables['classes_array'], $classes);
+  }
 }
 
 /**
@@ -632,16 +637,4 @@ function wetkit_adaptivetheme_views_data_export_feed_icon($variables) {
  */
 function wetkit_adaptivetheme_preprocess_views_exposed_form(&$vars, $hook) {
   $vars['form']['textfield']['#placeholder'] = t('Search');
-}
-
-/**
- * Implements template_preprocess_block().
- */
-function wetkit_adaptivetheme_preprocess_block(&$variables) {
-  // Add support for css classes and ids from panels
-  // Add classes
-  if (!empty($variables['elements']['#block']->css_class)) {
-    $classes = explode(' ', $variables['elements']['#block']->css_class);
-    $variables['classes_array'] = array_merge($variables['classes_array'], $classes);
-  }
 }
