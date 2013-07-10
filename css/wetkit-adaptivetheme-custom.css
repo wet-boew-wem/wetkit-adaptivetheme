@@ -90,7 +90,7 @@ div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; 
 .region-wetkit-33-66-second { width: 95%; }
 
 /* WET-BOEW */
-section#main-content { display: block !important; }
+div#main-content { display: block !important; }
 
 #gcwu-connect h2 { border: none; margin-bottom: 5px; color: #333; float: left; margin-top: 2px; margin-right: 10px; }
 

@@ -180,13 +180,13 @@
       <?php if (isset($search_indexing_start)): ?>
         <?php print $search_indexing_start; ?>
       <?php endif; ?>
-      <section id="main-content">
+      <div id="main-content">
         <?php print $messages; ?>
         <!-- region: Main Content -->
         <?php if ($content = render($page['content'])): ?>
           <?php print $content; ?>
         <?php endif; ?>
-      </section>
+      </div>
       <?php if (isset($search_indexing_stop)): ?>
         <?php print $search_indexing_stop; ?>
       <?php endif; ?>

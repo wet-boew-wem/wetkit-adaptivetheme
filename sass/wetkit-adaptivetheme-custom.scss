@@ -260,7 +260,10 @@ div.panels-ipe-placeholder h4 {
 /*
  * WET-BOEW
  */
-section#main-content { display:block !important; }
+
+div#main-content { 
+  display: block !important; 
+}
 
 #gcwu-connect h2 {
   border: none;
